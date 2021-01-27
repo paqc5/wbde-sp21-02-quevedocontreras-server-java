@@ -1,0 +1,66 @@
+.position-absolute-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.--teal {
+    color: #17a2b8;
+}
+
+.--teal-dark {
+    color: #138496;
+}
+
+.--teal-light {
+    color: #3ac5ca;
+}
+
+.--teal:hover {
+    color: #808080;
+}
+
+.--grey {
+    color: #b3b3b3;
+}
+
+.--grey-dark {
+    color: #808080;
+}
+
+.--grey-light {
+    color: #e6e6e6;
+}
+
+.white {
+    background-color: white;
+}
+
+.light-grey {
+    background-color: lightgrey;
+}
+
+.grey {
+    background-color: gray;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.pink {
+    background-color: pink;
+}
