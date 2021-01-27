@@ -19,37 +19,55 @@
         <div class="col-12 col-md-5 white">
             <div class="col col-md-10 mx-auto mt-5 px-4 px-md-0">
                 <div class="pt-4 mb-3">Logo</div>
-                <h1 class="mb-5">Sign In</h1>
+                <h1 class="mb-5">Sign Up</h1>
                 <form action="">
                     <div class="form-group">
                         <label class="col-form-label mb-2"
-                               for="username">Username</label>
+                               for="username">Username *</label>
                         <input class="form-control"
                                type="text"
                                name=""
                                id="username"
-                               placeholder="user123" />
+                               placeholder="user123"
+                               required />
+                        <div class="invalid-feedback d-block">
+                            Please choose an username.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="col-form-label mb-2"
-                               for="password">Password</label>
+                               for="password">Password *</label>
                         <input class="form-control"
                                type="password"
                                name=""
                                id="password"
-                               placeholder="notyourbirthday" />
+                               placeholder="notyourbirthday"
+                               required />
+                        <div class="invalid-feedback d-block">
+                            Please enter a password.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label mb-2"
+                               for="verify-password">Verify Password *</label>
+                        <input class="form-control"
+                               type="password"
+                               name=""
+                               id="verify-password"
+                               placeholder="againnotyourbirthday"
+                               required />
+                        <div class="invalid-feedback d-block">
+                            Please verify your password.
+                        </div>
                     </div>
                     <button
                             class="btn btn-primary btn-block btn-info"
-                            onclick="">Sign In</button>
+                            onclick="">Sign Up</button>
                 </form>
                 <div class="row justify-content-center text-center">
-                    <div class="col-8 border-bottom py-2">
-                        <a class="btn btn-sm --teal" href="">Forgot
-                            Password?</a>
-                    </div>
                     <div class="col-8 py-2">
-                        <a class="btn btn-sm --teal" href="">Sign Up</a>
+                        <p class="font-size-sm">Already Registered?
+                        <a class="text-link text-link-sm --teal" href="../login/login.template.client.html">Sign In</a></p>
                     </div>
                 </div>
             </div>

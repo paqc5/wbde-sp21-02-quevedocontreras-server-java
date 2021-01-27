@@ -1,10 +1,6 @@
-.position-absolute-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+p {
+  margin: 0;
 }
-
 .--teal {
     color: #17a2b8;
 }
@@ -31,6 +27,33 @@
 
 .--grey-light {
     color: #e6e6e6;
+}
+
+.text-link {
+    font-weight: 400;
+}
+
+.text-link:hover {
+    text-decoration: none;
+}
+
+.text-link-sm {
+    font-size: 0.875rem;
+}
+
+.font-size-std {
+    font-size: 1rem;
+}
+
+.font-size-sm {
+    font-size: 0.875rem;
+}
+
+.position-absolute-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .white {
