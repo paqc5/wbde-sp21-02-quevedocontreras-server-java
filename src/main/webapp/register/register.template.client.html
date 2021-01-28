@@ -9,76 +9,82 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="login.style.client.css"
+    <link rel="stylesheet" href="register.style.client.css"
           rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a921811fcf.js"
             crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="row vh-100 light-grey">
-        <div class="col-12 col-md-5 white">
-            <div class="col col-md-10 mx-auto mt-5 px-4 px-md-0">
-                <div class="pt-4 mb-3">Logo</div>
-                <h1 class="mb-5">Sign Up</h1>
-                <form action="">
-                    <div class="form-group">
-                        <label class="col-form-label mb-2"
-                               for="username">Username *</label>
-                        <input class="form-control"
-                               type="text"
-                               name=""
-                               id="username"
-                               placeholder="user123"
-                               required />
-                        <div class="invalid-feedback d-block">
-                            Please choose an username.
+    <div class="container-fluid wrapper vh-100 grey">
+        <div class="row h-100">
+            <div
+                 class="display-column-flex col-md-4 px-4 pt-5 px-lg-5 --white-bg">
+                <div class="col">
+                    <div class="pt-4 mb-3">Logo</div>
+                    <h1 class="mb-5">Sign Up</h1>
+                    <form action="">
+                        <div class="form-group">
+                            <label class="col-form-label mb-2"
+                                   for="username">Username</label>
+                            <input class="form-control"
+                                   type="text"
+                                   name=""
+                                   id="username"
+                                   placeholder="user123"
+                                   required />
+                            <div class="invalid-feedback d-block">
+                                Please choose an username.
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-form-label mb-2"
-                               for="password">Password *</label>
-                        <input class="form-control"
-                               type="password"
-                               name=""
-                               id="password"
-                               placeholder="notyourbirthday"
-                               required />
-                        <div class="invalid-feedback d-block">
-                            Please enter a password.
+                        <div class="form-group">
+                            <label class="col-form-label mb-2"
+                                   for="password">Password</label>
+                            <input class="form-control"
+                                   type="password"
+                                   name=""
+                                   id="password"
+                                   placeholder="notyourbirthday"
+                                   required />
+                            <div class="invalid-feedback d-block">
+                                Please enter a password.
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-form-label mb-2"
-                               for="verify-password">Verify Password *</label>
-                        <input class="form-control"
-                               type="password"
-                               name=""
-                               id="verify-password"
-                               placeholder="againnotyourbirthday"
-                               required />
-                        <div class="invalid-feedback d-block">
-                            Please verify your password.
+                        <div class="form-group">
+                            <label class="col-form-label mb-2"
+                                   for="verify-password">Verify Password</label>
+                            <input class="form-control"
+                                   type="password"
+                                   name=""
+                                   id="verify-password"
+                                   placeholder="againnotyourbirthday"
+                                   required />
+                            <div class="invalid-feedback d-block">
+                                Please verify your password.
+                            </div>
                         </div>
-                    </div>
-                    <button
-                            class="btn btn-primary btn-block btn-info"
-                            onclick="">Sign Up</button>
-                </form>
-                <div class="row justify-content-center text-center">
-                    <div class="col-8 py-2">
-                        <p class="font-size-sm">Already Registered?
-                        <a class="text-link text-link-sm --teal" href="../login/login.template.client.html">Sign In</a></p>
+                        <button
+                                class="btn btn-primary btn-block btn-info"
+                                onclick="">Sign Up</button>
+                    </form>
+                    <div class="row justify-content-center text-center">
+                        <div class="col-12">
+                            <p class="font-size-sm">Already Registered?
+                                <a class="text-link text-link-sm --teal-txt"
+                                   href="../login/login.template.client.html">Sign
+                                    In</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <div class="text-center">
+                    <a class="text-link text-link-sm --grey-txt" type="button"
+                       href="../index.html">Cancel</a>
+                </div>
             </div>
-            <div class="position-absolute-bottom text-center">
-                <a class="btn btn-sm --grey" type="button"
-                   href="../index.html">Cancel</a>
-            </div>
-        </div>
-        <div class="col-12 col-md-7 red">
-            <div class="">
-                Message Bla Bla
+            <div class="col-12 col-md-8 px-md-0 red">
+                <div class="">
+                    Message Bla Bla
+                </div>
             </div>
         </div>
     </div>
