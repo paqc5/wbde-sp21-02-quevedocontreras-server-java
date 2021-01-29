@@ -1,3 +1,14 @@
+/* ------- Reset Bootstrap Classes ------- */
+
+html,
+body {
+    height: 100%;
+}
+
+h1 {
+    margin-bottom: 3rem!important;
+}
+
 p {
     margin: 0;
 }
@@ -8,7 +19,7 @@ p {
 .container-md,
 .container-sm,
 .container-xl {
-  padding: 0;
+    padding: 0;
 }
 
 .col,
@@ -81,28 +92,246 @@ p {
 .col-xl-8,
 .col-xl-9,
 .col-xl-auto {
-    padding: 0;
-    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container-fluid {
+    height: 100vh;
 }
 
 .row {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
 }
 
-.display-column-flex {
+.form-control {
+    margin-bottom: 0.5rem !important;
+}
+
+.col-form-label {
+    margin-bottom: 0.5rem !important;
+}
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+@media (min-width: 768px) {
+    .line-height-adjustment-2 {
+        padding: 0;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 822px) {
+    .line-height-adjustment-2 {
+        line-height: 1.5;
+        padding-top: calc(.375rem + 1px);
+        padding-bottom: calc(.375rem + 1px);
+    }
+}
+
+@media (min-width: 992px) {
+    .line-height-adjustment-1 {
+        padding: 0;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 1352px) {
+    .line-height-adjustment-1 {
+        line-height: 1.5;
+        padding-top: calc(.375rem + 1px);
+        padding-bottom: calc(.375rem + 1px);
+    }
+}
+
+
+/* ------- Main Layout Classes ------- */
+
+.layout-column-wrapper {
     display: flex;
     flex-flow: column;
+    height: 100%;
     padding: 0;
     margin: 0;
 }
+
+.layout-row-wrapper {
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.main-header-wrapper {
+    min-height: 45px;
+}
+
+.main-content-wrapper {}
+
+.main-navigation-wrapper {
+    position: fixed;
+    bottom: 0;
+    height: 7%;
+    z-index: 100;
+}
+
+.main-content {
+    order: 2;
+    padding-bottom: 12%;
+}
+
+.main-sidebar-wrapper {
+    order: 1;
+    height: 17%;
+    min-height: 17%;
+}
+
+
+/* ------- Main Layout Medium Screens ------- */
+
+@media (min-width: 768px) {
+    .main-header-wrapper {
+        min-height: 55px;
+    }
+    .main-navigation-wrapper {
+        position: relative;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 5%;
+        flex: 0 0 5%;
+        max-width: 5%;
+        -webkit-order: 1;
+        order: 1;
+        height: 100%;
+    }
+    .main-content {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+        flex: 0 0 80%;
+        max-width: 80%;
+        -webkit-order: 2;
+        order: 2;
+        height: 100%;
+        padding: 1rem;
+    }
+    .main-sidebar-wrapper {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 15%;
+        flex: 0 0 15%;
+        max-width: 15%;
+        -webkit-order: 3;
+        order: 3;
+        height: 100%;
+    }
+}
+
+
+/* ------- Landing Content Classes ------- */
+
+.landing-form-wrapper {
+    padding: 4.5rem 1.5rem 2.6rem;
+    background-color: white;
+}
+
+.landing-form-content {
+    height: 100%;
+}
+
+.landing-img-content {
+    display: none;
+}
+
+.landing-logo {
+    margin-bottom: 1.5rem;
+}
+
+.col-lg-3-5,
+.col-lg-4-5,
+.col-lg-7-5,
+.col-lg-8-5 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+}
+
+
+/* ------- Landing Content Large Screens ------- */
+
+@media (min-width: 992px) {
+    .landing-form-content {}
+    .landing-img-content {
+        display: block;
+    }
+    .col-lg-3-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 29.166666%;
+        flex: 0 0 29.166666%;
+        max-width: 29.166666%;
+    }
+    .col-lg-4-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 37.5%;
+        flex: 0 0 37.5%;
+        max-width: 37.5%;
+    }
+    .col-lg-7-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 62.5%;
+        flex: 0 0 62.5%;
+        max-width: 62.5%;
+    }
+    .col-lg-8-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 70.833333%;
+        flex: 0 0 70.833333%;
+        max-width: 70.833333%;
+    }
+}
+
+
+/* ------- Background Color Classes ------- */
 
 .--white-bg {
     background-color: white;
 }
 
+.--teal-bg {
+    background-color: #17a2b8;
+}
+
 .red {
     background-color: red;
 }
+
+.green {
+    background-color: #b2eb17;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.blue {
+    background-color: blue;
+}
+
+
+/* ------- Text Color Classes ------- */
 
 .--teal-txt {
     color: #17a2b8;
@@ -128,6 +357,9 @@ p {
     color: #e6e6e6;
 }
 
+
+/* ------- Text Color Hover Classes ------- */
+
 .--teal-txt:hover {
     color: #808080;
 }
@@ -137,7 +369,7 @@ p {
 }
 
 
-/* ------- Text Links ------- */
+/* ------- Text Links Classes ------- */
 
 .text-link {
     font-weight: 400;
@@ -158,7 +390,7 @@ p {
 }
 
 
-/* ------- Font Sizes ------- */
+/* ------- Font Sizes Classes ------- */
 
 .font-size-std {
     font-size: 1rem;

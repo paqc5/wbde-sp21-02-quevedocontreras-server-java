@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"
+		  shrink-to-fit=no>
+	<title>Profile</title>
+	<link rel="stylesheet"
+		  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		  rel="stylesheet" />
+	<link rel="stylesheet" href="../styles.css" rel="stylesheet" />
+	<link rel="stylesheet" href="profile.style.client.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!-- Sets the whole width of the webpage-->
+	<div class="container-fluid blue">
+		<!-- Sets the layout as a column -->
+		<div class="layout-column-wrapper pink">
+			<!-- Main Header -->
+			<div class="main-header-wrapper red">
+				<div class="main-logo">Logo</div>
+			</div>
+			<!-- Navigation Bar, Content, Sidebar-->
+			<div class="main-content-wrapper row col-md">
+				<div class="main-navigation-wrapper col-12 --teal-bg">navigation</div>
+				<div class="main-content col-12 green">
+					<!-- Profile/User Information-->
+					<div class="col profile-content">
+						<h1>Profile</h1>
+						<!-- Success message after updating info-->
+						<div class="row justify-content-end">
+							<div class="col col-md-10 alert alert-success"
+								 role="alert">
+								<p>Profile successfully updated.</p>
+							</div>
+						</div>
+						<!-- Form to check/update user info-->
+						<div class="col">
+							<form>
+								<div class="form-group row">
+									<label class="col-md-2 col-form-label"
+										   for="username">Username</label>
+									<div class="col-md-10">
+										<input class="form-control"
+											   type="text"
+											   placeholder="user123"
+											   readonly />
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="phone"
+										   class="col-md-2 col-form-label">Phone</label>
+									<div class="col-md-10">
+										<input type="tel"
+											   class="form-control"
+											   id="phone"
+											   placeholder="(555) 123-4567 " />
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-2 col-form-label"
+										   for="email">E-mail</label>
+									<div class="col-md-10">
+										<input class="form-control"
+											   type="email"
+
+											   id="email"
+											   placeholder="name@example.com" />
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-2 col-form-label"
+										   for="role">Role</label>
+									<div class="col-md-10">
+										<select class="form-control"
+												id="role">
+											<option>Faculty
+											</option>
+											<option>Student
+											</option>
+											<option>Admin
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-2 col-form-label line-height-adjustment-2"
+										   for="birthday">Date of
+										Birth</label>
+									<div class="col-md-10">
+										<input class="form-control"
+											   type="date"
+											   id="birthday"
+											   name="birthday"
+											   max="1910-01-01"
+											   placeholder="mm/dd/yy" />
+									</div>
+								</div>
+								<div class="row justify-content-end">
+									<div class="col-md-10">
+										<a
+												class="btn btn-primary btn-block btn-info mb-3" onclick=""
+												type="submit"
+												href="">Update
+										</a>
+									</div>
+									<div class="col-md-10">
+										<a
+												class="btn btn-block btn-dark"
+												type="submit"
+												href="../index.html">Logout
+										</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- Main Sidebar -->
+				<div class="main-sidebar-wrapper col-12 blue">sidebar</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

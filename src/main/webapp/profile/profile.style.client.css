@@ -1,0 +1,13 @@
+/* ------- Profile Content Class ------- */
+
+.profile-content {
+    padding: 1.5rem 1rem 2rem;
+    background-color: #e6e6e6;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .profile-content {
+        padding: 2.5rem;
+    }
+}
