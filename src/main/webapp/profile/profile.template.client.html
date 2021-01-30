@@ -15,34 +15,36 @@
 
 <body>
 	<!-- Sets the whole width of the webpage-->
-	<div class="container-fluid blue">
+	<div class="container-fluid">
 		<!-- Sets the layout as a column -->
-		<div class="layout-column-wrapper pink">
+		<div class="layout-column-wrapper">
 			<!-- Main Header -->
-			<div class="main-header-wrapper red">
-				<div class="main-logo">Logo</div>
+			<div class="main-header-wrapper">
+				<div class="main-logo"></div>
 			</div>
 			<!-- Navigation Bar, Content, Sidebar-->
 			<div class="main-content-wrapper row col-md">
-				<div class="main-navigation-wrapper col-12 --teal-bg">navigation</div>
-				<div class="main-content col-12 green">
+				<!-- Navigation Bar -->
+				<div class="main-navigation-wrapper col-12"></div>
+				<!-- Main Content -->
+				<div class="main-content col-12">
 					<!-- Profile/User Information-->
-					<div class="col profile-content">
+					<div class="profile-content-wrapper col">
 						<h1>Profile</h1>
-						<!-- Success message after updating info-->
-						<div class="row justify-content-end">
-							<div class="col col-md-10 alert alert-success"
-								 role="alert">
-								<p>Profile successfully updated.</p>
-							</div>
-						</div>
 						<!-- Form to check/update user info-->
-						<div class="col">
+						<div class="profile-form-wrapper col col-xl-7">
+							<!-- Success message after updating info-->
+							<div class="row justify-content-end">
+								<div class="col alert alert-success col-md-9"
+									 role="alert">
+									<p>Profile successfully updated.</p>
+								</div>
+							</div>
 							<form>
 								<div class="form-group row">
-									<label class="col-md-2 col-form-label"
+									<label class="col-md-3 col-form-label"
 										   for="username">Username</label>
-									<div class="col-md-10">
+									<div class="col-md-9">
 										<input class="form-control"
 											   type="text"
 											   placeholder="user123"
@@ -51,18 +53,18 @@
 								</div>
 								<div class="form-group row">
 									<label for="phone"
-										   class="col-md-2 col-form-label">Phone</label>
-									<div class="col-md-10">
-										<input type="tel"
-											   class="form-control"
+										   class="col-md-3 col-form-label">Phone</label>
+									<div class="col-md-9">
+										<input class="form-control"
+												type="tel"
 											   id="phone"
 											   placeholder="(555) 123-4567 " />
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-md-2 col-form-label"
+									<label class="col-md-3 col-form-label"
 										   for="email">E-mail</label>
-									<div class="col-md-10">
+									<div class="col-md-9">
 										<input class="form-control"
 											   type="email"
 
@@ -71,9 +73,9 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-md-2 col-form-label"
+									<label class="col-md-3 col-form-label"
 										   for="role">Role</label>
-									<div class="col-md-10">
+									<div class="col-md-9">
 										<select class="form-control"
 												id="role">
 											<option>Faculty
@@ -86,10 +88,10 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-md-2 col-form-label line-height-adjustment-2"
+									<label class="col-md-3 col-form-label"
 										   for="birthday">Date of
 										Birth</label>
-									<div class="col-md-10">
+									<div class="col-md-9">
 										<input class="form-control"
 											   type="date"
 											   id="birthday"
@@ -99,14 +101,14 @@
 									</div>
 								</div>
 								<div class="row justify-content-end">
-									<div class="col-md-10">
+									<div class="col-md-9">
 										<a
 												class="btn btn-primary btn-block btn-info mb-3" onclick=""
 												type="submit"
 												href="">Update
 										</a>
 									</div>
-									<div class="col-md-10">
+									<div class="col-md-9">
 										<a
 												class="btn btn-block btn-dark"
 												type="submit"
@@ -119,7 +121,7 @@
 					</div>
 				</div>
 				<!-- Main Sidebar -->
-				<div class="main-sidebar-wrapper col-12 blue">sidebar</div>
+				<div class="main-sidebar-wrapper col-12"></div>
 			</div>
 		</div>
 	</div>
