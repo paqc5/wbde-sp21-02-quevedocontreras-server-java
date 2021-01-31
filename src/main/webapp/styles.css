@@ -43,6 +43,17 @@ p {
     margin: 0;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-weight: 400;
+}
+
 .container,
 .container-fluid,
 .container-lg,
@@ -205,7 +216,17 @@ p {
     max-width: 95.833333%;
 }
 
-@media (min-width: 768px) {}
+.navbar-expand-md {}
+
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        display: none;
+    }
+}
 
 @media (min-width: 992px) {
     .col-lg-0-5 {
@@ -331,7 +352,7 @@ p {
 }
 
 .main-logo {
-    background-image: url(img/main-logo-xs.jpg);
+    background-image: url(assets/img/main-logo-sm-mb.jpg);
     background-size: contain;
     height: 45px;
     width: 45px;
@@ -348,27 +369,13 @@ p {
     background-color: #117a8a;
 }
 
-.main-navigation-wrapper .row {}
-
 .main-navigation-wrapper ul {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .main-navigation-wrapper li {
     text-align: center;
-}
-
-.paqc-home-btn-order {
-    order: 2;
-}
-
-.paqc-courses-btn-order {
-    order: 1;
-}
-
-.paqc-profile-btn-order {
-    order: 3;
 }
 
 .main-navigation-wrapper a {
@@ -378,8 +385,7 @@ p {
 }
 
 .main-navigation-wrapper a:hover {
-    background-color: #cccccc !important;
-    color: #117a8a;
+    background-color: #1c8391 !important;
 }
 
 .main-navigation-wrapper li p {
@@ -388,7 +394,7 @@ p {
 
 .paqc-active a,
 .paqc-active a:hover {
-    background-color: #17a2b8 !important;
+    background-color: #1d98a8 !important;
     color: #117a8a !important;
 }
 
@@ -403,7 +409,7 @@ p {
 }
 
 
-/* ------- Main Content Classes ------- */
+/* ------- General Content Classes ------- */
 
 .main-content {
     order: 2;
@@ -412,10 +418,22 @@ p {
 
 .main-sidebar-wrapper {
     order: 1;
-    height: 17%;
-    min-height: 17%;
     background-color: #17a2b8;
     border-bottom: 2px solid #45b5c6;
+}
+
+.paqc-content-wrapper {
+    border-top: 2px solid #d8d8d8 !important;
+    background-color: #efeeee;
+    border-bottom: 2px solid #45b5c6;
+    margin-bottom: 0.5rem;
+    padding: 1rem 0rem 1rem 1.7rem;
+}
+
+.paqc-module-title-wrapper {
+    background-color: #efeeee;
+    border-bottom: 1px solid #cccccc;
+    padding: 1rem 0rem 1rem 1.7rem;
 }
 
 
@@ -427,13 +445,20 @@ p {
         min-height: 55px;
     }
     .main-logo {
-        background-image: url(img/main-logo-sm.jpg);
+        background-image: url(assets/img/main-logo-sm.jpg);
         height: 55px;
         width: 60px;
     }
     .main-content-wrapper {
         display: flex;
         flex-direction: row;
+    }
+    .paqc-content-wrapper {
+        border: 1px solid #d8d8d8;
+        border-top: 2px solid #45b5c6 !important;
+        border-bottom: 2px solid #d8d8d8 !important;
+        margin-bottom: 0.5rem;
+        padding-left: 1.3rem;
     }
     /* ------- Navigation Classes ------- */
     .main-navigation-wrapper {
@@ -452,15 +477,6 @@ p {
     }
     .main-navigation-wrapper li {
         text-align: center;
-    }
-    .paqc-home-btn-order {
-        order: 1;
-    }
-    .paqc-courses-btn-order {
-        order: 2;
-    }
-    .paqc-profile-btn-order {
-        order: 3;
     }
     .main-navigation-wrapper li p {
         display: block;
@@ -512,16 +528,46 @@ p {
     background-color: white;
 }
 
+.landing-logo-wrapper {
+    margin-bottom: 3rem;
+}
+
+.landing-logo {
+    background-image: url("assets/img/main-logo-md.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 60px;
+    margin: 0;
+}
+
+.landing-logo-title {
+    padding: 0.4rem 0 0;
+}
+
+.landing-logo-wrapper .col {
+    margin: 0;
+}
+
+.landing-logo-wrapper h3 {
+    margin: 0;
+    margin-bottom: 0.2rem;
+    font-weight: 400;
+}
+
+.landing-logo-wrapper h4 {
+    margin: 0;
+    margin-bottom: 0.12rem;
+    color: #808080;
+    font-weight: 300;
+}
+
 .landing-form-content {
     height: 100%;
 }
 
 .landing-img-content {
     display: none;
-}
-
-.landing-logo {
-    margin-bottom: 1.5rem;
 }
 
 
@@ -575,6 +621,10 @@ p {
 
 /* ------- Text Color Classes ------- */
 
+.--white-txt {
+    color: #fff;
+}
+
 .--teal-txt {
     color: #17a2b8;
 }
@@ -595,8 +645,16 @@ p {
     color: #808080;
 }
 
+.--grey-medium-txt {
+    color: #cccccc;
+}
+
 .--grey-light-txt {
     color: #dbdbdb;
+}
+
+.--grey-extra-light-txt {
+    background-color: #e4e3e2;
 }
 
 
@@ -616,6 +674,10 @@ p {
 
 .--grey-light-txt:hover {
     color: #efeeee;
+}
+
+.--grey-medium-txt:hover {
+    color: #000000;
 }
 
 
@@ -652,4 +714,20 @@ p {
 
 .font-size-xs {
     font-size: 0.6rem;
+}
+
+.paqc-icon {
+    display: flex;
+    align-items: center;
+    padding-left: 0.2rem;
+    color: #999999;
+}
+
+.paqc-icon a {
+    padding: 0.3rem;
+    color: #808080;
+}
+
+.paqc-icon a:hover {
+    color: #000000;
 }

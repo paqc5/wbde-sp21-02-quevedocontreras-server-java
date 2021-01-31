@@ -5,30 +5,43 @@
     background-color: #efeeee;
     border-bottom: 2px solid #45b5c6;
     margin-bottom: 0.5rem;
+    padding: 1rem 0rem 1rem 1.7rem;
 }
 
-.add-course-wrapper h3 {
+.add-course-wrapper .col,
+.add-course-wrapper i {
+    align-self: center;
+}
+
+.add-course-title {
+    display: none;
+    align-self: center;
+}
+
+.add-course-title h3 {
     margin: 0;
 }
 
-.add-course-wrapper input {
+.add-course-input-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 1 0 0;
+    flex: 1 0 0;
+    color: unset;
+}
+
+.add-course-input-wrapper .paqc-icon a {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.add-course-input-wrapper .paqc-icon {
+    padding-top: 1px;
+}
+
+.add-course-input-wrapper input {
     margin: 0 !important;
     padding-right: 15px;
     padding-left: 15px;
-}
-
-.add-course-wrapper {
-    padding: 1rem 0.5rem 1rem 1.7rem;
-}
-
-.fa-lg-icon {
-    cursor: pointer;
-    padding: 0.7rem 0.5rem;
-}
-
-.fa-2x-icon {
-    cursor: pointer;
-    padding: 0.2rem 0.5rem;
 }
 
 
@@ -71,29 +84,11 @@
     padding: 1.5rem 0rem 1.5rem 0.8rem;
 }
 
-.paqc-file-icon {
-    display: flex;
-    align-items: center;
-    padding-left: 0.2rem;
-}
-
-.paqc-trash-icon {
-    display: flex;
-    align-items: center;
+.course-info-right-icon {
     min-width: 35px;
     max-width: 35px;
 }
 
-.paqc-trash-icon a {
-    padding: 0.3rem;
-    color: #808080;
-}
-
-.paqc-trash-icon a:hover {
-    color: #000000;
-}
-
-.paqc-file-icon,
 .course-info-primary h4,
 .course-info-secondary h4 {
     color: #999999;
@@ -135,6 +130,7 @@
         border-top: 2px solid #45b5c6 !important;
         border-bottom: 2px solid #d8d8d8 !important;
         margin-bottom: 0.5rem;
+        padding-left: 1.3rem;
     }
     .course-content-wrapper {
         border: 1px solid #d8d8d8;
@@ -149,12 +145,15 @@
     .course-info-primary h4 {
         padding: 0.1rem 0.5rem;
     }
-    .paqc-file-icon {
+    .course-info-content .paqc-icon {
         padding-left: 0.5rem;
     }
 }
 
 @media (min-width: 1200px) {
+    .add-course-title {
+        display: block;
+    }
     .course-info-secondary {
         -webkit-box-flex: 0;
         -ms-flex: 1 0 0;

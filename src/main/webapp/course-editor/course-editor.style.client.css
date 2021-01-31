@@ -1,0 +1,76 @@
+        .paqc-module-navbar {
+            padding: 0px;
+        }
+        
+        .paqc-module-navbar-toggle-wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex: auto;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0.5rem 1rem 0.5rem 1.7rem;
+            border-bottom: 1px solid #1b98a5;
+        }
+        
+        .paqc-module-titles-wrapper .module-btn {
+            border-top: 1px solid #45b5c6;
+            border-bottom: 1px solid #1f99aa;
+            padding: 1rem 0.5rem 1rem 1.7rem !important;
+        }
+        
+        .paqc-module-titles-wrapper .module-btn a {
+            text-decoration: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex: auto;
+        }
+        
+        .paqc-module-titles-wrapper .module-btn i {
+            margin-right: 0.3em;
+            align-self: center;
+        }
+        
+        .paqc-module-titles-wrapper .module-btn p {
+            align-self: center;
+            color: rgba(0, 0, 0, .5);
+        }
+        
+        .paqc-module-titles-wrapper .module-btn p:hover {
+            color: rgba(0, 0, 0, .9);
+        }
+        
+        .paqc-module-titles-wrapper .nav-link {
+            padding: 0;
+        }
+        
+        .paqc-module-titles-wrapper .active,
+        .paqc-module-titles-wrapper .module-btn:hover {
+            background-color: #1d94a8;
+        }
+        
+        @media (min-width: 768px) {
+            .paqc-module-navbar-toggle-wrapper {
+                display: none;
+            }
+            .paqc-module-titles-wrapper {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-direction: row;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+            .paqc-module-titles-wrapper a {
+                width: 100%;
+            }
+            .module-btn {
+                width: 100%;
+            }
+        }
+        
+        .paqc-course-topics-wrapper .navbar {
+            padding: 0;
+        }
