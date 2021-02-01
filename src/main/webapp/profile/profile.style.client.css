@@ -1,15 +1,12 @@
-/* ------- Profile Content Class ------- */
+/* ------- Profile Classes ------- */
 
-.profile-content-wrapper {
+.paqc-profile-wrapper {
     padding: 2rem 1rem 3rem;
-    background-color: #efeeee;
     height: 100%;
-    border: 1px solid #d8d8d8;
-    border-top: 2px solid #45b5c6;
 }
 
 @media (min-width: 768px) {
-    .profile-content-wrapper {
+    .paqc-profile-wrapper {
         padding: 2.5rem 2rem 3rem 3rem;
     }
 }
