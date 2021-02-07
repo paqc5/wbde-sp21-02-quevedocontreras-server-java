@@ -55,6 +55,10 @@ a {
     margin: 0;
 }
 
+a {
+    cursor: pointer;
+}
+
 .container,
 .container-fluid,
 .container-lg,
@@ -62,6 +66,7 @@ a {
 .container-sm,
 .container-xl {
     padding: 0;
+    height: 100%;
 }
 
 .col,
@@ -140,10 +145,6 @@ a {
     margin-right: 0;
 }
 
-.container-fluid {
-    height: 100vh;
-}
-
 .row {
     margin-left: 0;
     margin-right: 0;
@@ -151,16 +152,20 @@ a {
 }
 
 .form-control {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.5rem;
 }
 
 .col-form-label {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.5rem;
 }
 
 .invalid-feedback {
     margin: 0;
     margin-bottom: 0.5rem;
+}
+
+.alert {
+    padding: .75rem 1.25rem;
 }
 
 .nav-link {
@@ -185,11 +190,21 @@ a {
 
 /* ------- Extra Column Classes ------- */
 
+.paqc-col-md-2-2,
 .paqc-col-lg-4-5,
 .paqc-col-lg-7-5 {
     position: relative;
     width: 100%;
     min-height: 1px;
+}
+
+@media (min-width: 768px) {
+    .paqc-col-md-2-2 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 18.33333%;
+        flex: 0 0 18.33333%;
+        max-width: 18.33333%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -212,26 +227,34 @@ a {
 
 .paqc-structure-column-wrapper {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     height: 100%;
     background-color: #e4e3e2;
 }
 
 .paqc-structure-row-wrapper {
     display: flex;
-    flex-flow: row;
+    flex-direction: row;
     height: 100%;
 }
 
 .paqc-layout-wrapper {
-    flex: auto;
+    display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .paqc-adaptive-col {
     -webkit-box-flex: 0;
     -ms-flex: 1 0 0;
     flex: 1 0 0;
+}
+
+.paqc-centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -599,6 +622,7 @@ a {
     background-color: #f0764a;
 }
 
+
 /* ------- Text Color Classes ------- */
 
 .paqc-teal-txt {
@@ -608,6 +632,7 @@ a {
 .paqc-teal-txt:hover {
     color: #808080;
 }
+
 
 /* ------- Text Links Classes ------- */
 
@@ -652,4 +677,20 @@ a {
         padding-top: calc(.375rem + 1px);
         padding-bottom: calc(.375rem + 1px);
     }
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
 }

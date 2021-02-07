@@ -91,7 +91,10 @@
     background-color: #efeeee !important;
 }
 
-.paqc-topics-tab .nav-link,
+.paqc-topics-tab .nav-link {
+    border-radius: 0;
+}
+
 .paqc-topics-tab a {
     padding: 1rem 1.7rem;
     border-radius: 0;
@@ -173,5 +176,9 @@
     }
     .paqc-add-topic-button p {
         display: none;
+    }
+    .paqc-topics-tab .paqc-add-topic-button a:hover {
+        color:#1b98a5;
+        background-color: #efeeee;
     }
 }
