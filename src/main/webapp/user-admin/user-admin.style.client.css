@@ -96,9 +96,30 @@
     border-color: #1d2124;
 }
 
+.modal {
+    height: auto;
+}
+
+@media (min-width: 576px) {
+    .modal {
+        max-width: 500px;
+        height: auto;
+        left: 50%;
+        top: 3rem;
+        margin-left: -250px;
+    }
+    .modal-dialog {
+        margin: 0.35rem;
+    }
+}
+
 @media (min-width: 768px) {
     .paqc-user-info-wrapper {
         padding: 2rem 1.5rem;
+    }
+    .paqc-user-info-wrapper h1 {
+        margin-bottom: 1.5rem !important;
+        padding-left: 1rem;
     }
     .paqc-table-header {
         border-top: 1px solid #cccccc;
@@ -109,7 +130,7 @@
         padding: 0.75rem;
     }
     .paqc-table-title.row {
-        padding: 0.75rem 0.95rem;
+        padding: 1rem 0.95rem;
     }
     .paqc-table-row {
         padding: 0;

@@ -9,18 +9,24 @@ var $lastNameFld;
 var $passwordFld;
 var $roleFld;
 var users;
+var $body;
+var $modal;
+var $deleteConfirmBtn;
+var $deleteCancelBtn;
 var userService = new AdminUserServiceClient();
 
 function createUser() {
-  if(emptyFields()) {
-    invalidFeedback()
+  if(isEmpty()) {
+    invalidFeedback("Please fill out all the fields.")
     return
   }
 
+  var firstName = $firstNameFld.val().charAt(0).toUpperCase() + $firstNameFld.val().substr(1).toLowerCase()
+  var lastName = $lastNameFld.val().charAt(0).toUpperCase() + $lastNameFld.val().substr(1).toLowerCase()
   var newUser = {
     username: $usernameFld.val(),
-    firstName: $firstNameFld.val(),
-    lastName: $lastNameFld.val(),
+    firstName: firstName,
+    lastName: lastName,
     password: $passwordFld.val(),
     role: $roleFld.val()
   }
@@ -29,7 +35,7 @@ function createUser() {
       users.push(userData)
       resetFields()
       renderUsers(users)
-      validFeedback()
+      validFeedback("User created successfully")
     } else {
       errorFeedback()
     }
@@ -49,8 +55,8 @@ function editUser (event) {
 }
 
 function updateUser() {
-  if (emptyFields()) {
-    invalidFeedback()
+  if (isEmpty()) {
+    invalidFeedback("Select an user and fill out all the fields.")
     return
   }
 
@@ -68,7 +74,7 @@ function updateUser() {
       users[index] = selectedUser
       resetFields()
       renderUsers(users)
-      validFeedback()
+      validFeedback("User updated successfully.")
     } else {
       errorFeedback()
     }
@@ -78,20 +84,44 @@ function updateUser() {
 
 function deleteUser(event) {
   var index = $(event.target).attr("id")
+  showModal(index)
+}
+
+function confirmDeleteUser(event) {
+  var index = $(event.target).attr("id")
   var userId = users[index]._id
   userService.deleteUser(userId).then(function (status) {
     users.splice(index, 1)
     renderUsers(users)
+    hideModal()
   })
 }
 
-function emptyFields() {
-  $('.paqc-input').each(function () {
-    if (($(this).val() === "") || ($('.paqc-input').has('option').length === 0)) {
-      return true;
-    }
+function showModal(index) {
+  $body.addClass("modal-open").append(`<div class="modal-backdrop fade show"></div>`)
+  $modal.css("display", "block").addClass("show").removeAttr("aria-hidden")
+  $deleteConfirmBtn.attr('id', index)
+  $('.modal-backdrop').click(function () {
+    $modal.addClass("modal-static").css("overflow-y", "hidden")
+    setTimeout(function () {
+      $modal.removeClass("modal-static").css("overflow-y", "none")
+    }, 300);
   })
-  return false
+}
+function hideModal() {
+  $deleteCancelBtn.removeAttr('id')
+  $body.removeClass("modal-open")
+  $('.modal-backdrop').remove()
+  $modal.css("display", "none").removeClass("show").attr("aria-hidden", "true")
+}
+function isEmpty() {
+  /** https://forum.jquery.com/topic/checking-multiple-input-fields */
+  if ($('.paqc-input').filter(function() { 
+    return this.value === ""
+   }).length === 0) {
+    return false
+  }
+  return true
 }
 
 function fillFields (user) {
@@ -110,22 +140,22 @@ function resetFields() {
   $roleFld.val("");
 }
 
-function invalidFeedback() {
+function invalidFeedback(message) {
   $validationMsg.empty()
   $validationMsg.prepend(`
     <div class="paqc-validation-message col-12 alert alert-danger">
-      Please complete all the inputs.
+      ${message}
     </div>`)
   setTimeout(function () {
     $validationMsg.empty();
   }, 4000);
 }
 
-function validFeedback() {
+function validFeedback(message) {
   $validationMsg.empty()
   $validationMsg.prepend(`
     <div class="paqc-validation-message col-12 alert alert-success">
-      User created successfully.
+      ${message}
     </div>`)
   setTimeout(function () {
     $validationMsg.empty();
@@ -225,9 +255,15 @@ function main() {
   $lastNameFld = $('.paqc-lastname-fld')
   $passwordFld = $('.paqc-password-fld')
   $roleFld = $('.paqc-role-fld')
+  $body = $('body')
+  $modal = $('.modal')
+  $deleteConfirmBtn = $('.paqc-confirm-delete-btn')
+  $deleteCancelBtn = $('.paqc-cancel-delete-btn')
 
   $createUserBtn.click(createUser)
   $updateUserBtn.click(updateUser)
+  $deleteCancelBtn.click(hideModal)
+  $deleteConfirmBtn.click(confirmDeleteUser)
 
   userService.findAllUsers().then(function(usersData) {
     users = usersData

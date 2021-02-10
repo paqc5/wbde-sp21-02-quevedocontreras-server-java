@@ -1,184 +1,180 @@
-/* ------- Modules Navbar Classes ------- */
-
-
-/* Small Screens */
-
-.paqc-modules-navbar,
-.paqc-topics-navbar {
-    padding: 0;
-    width: 100%;
-}
-
-.paqc-toggle-wrapper {
-    display: flex;
-    flex: auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0.5rem 1rem 0.5rem 1.7rem;
-    border-bottom: 2px solid #1b98a5;
-}
-
-.paqc-toggle-wrapper .navbar-brand {
-    font-weight: 300;
-}
-
-.paqc-module-buttons-wrapper .nav {
-    width: 100%;
-}
-
-.paqc-module-btn {
-    position: relative;
-}
-
-.paqc-module-buttons-wrapper .paqc-module-btn .nav-link:link {
-    font-weight: 200;
-    color: #dbdbdb;
-    display: flex;
-    flex: auto;
-    border-top: 1px solid #45b5c6 !important;
-    border-bottom: 1px solid #1f99aa !important;
-    padding: 1rem 0.5rem 1rem 1.7rem;
-    border-radius: 0;
-}
-
-.paqc-module-buttons-wrapper .paqc-module-btn .nav-link:hover {
-    background-color: #0d5c68;
-}
-
-.paqc-module-buttons-wrapper .paqc-module-btn .nav-link.active {
-    font-weight: 400;
-    border-radius: 0;
-}
-
-.paqc-module-buttons-wrapper .paqc-icon {
-    color: #dbdbdb;
-    padding: 0;
-}
-
-.paqc-module-buttons-wrapper i {
-    margin-right: 0.5rem;
-}
-
-.paqc-module-btn .paqc-icon:active {
-    color: #0d5c68 !important;
-}
-
-.paqc-editor-icon-trash {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    height: 100%;
-}
-
-.paqc-editor-icon-trash a {
-    color: #c6c6c6;
-}
-
-
-/* ------- Topics Navbar Classes ------- */
-
-.paqc-topics-buttons-wrapper .paqc-content-wrapper {
-    padding: 0;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #cccccc;
-}
-
-.paqc-topics-content,
-.paqc-topics-content:hover,
-.paqc-topics-tab,
-.paqc-topics-tab:hover {
-    background-color: #efeeee !important;
-}
-
-.paqc-topics-tab .nav-link {
-    border-radius: 0;
-}
-
-.paqc-topics-tab a {
-    padding: 1rem 1.7rem;
-    border-radius: 0;
-    color: #808080;
-}
-
-.paqc-topics-buttons {
-    border-bottom: 1px solid #cccccc;
-}
-
-.paqc-topics-buttons a {
-    width: 100%;
-    border-bottom: 1px solid #cccccc;
-}
-
-.paqc-topics-tab a:hover {
-    background-color: #c1c1c1;
-    color: #808080;
-}
-
-.paqc-topics-content {
-    padding: 2.5rem;
-}
-
-.paqc-add-topic-button {
-    width: 100%;
-}
-
-.paqc-add-topic-button.paqc-icon {
-    padding: 0;
-}
-
-.paqc-add-topic-button a {
-    padding: 0.7rem 1rem;
-    border: none;
-    text-decoration: none;
-    display: flex;
-}
-
-.paqc-add-topic-button a:hover {
-    background-color: #c1c1c1;
-}
-
-.paqc-add-topic-button i {
-    margin-right: 10px;
-}
-
-.paqc-add-topic-button p {
-    align-self: center;
-}
-
-
-/* Medium Screens */
-
-@media (min-width: 768px) {
-    .paqc-toggle-wrapper {
-        display: none;
+    /* ------- Modules Navbar Classes ------- */
+    /* Small Screens */
+    /* Modules Classes */
+    
+    .paqc-modules-navbar-wrapper {
+        width: 100%;
     }
-    .paqc-topics-buttons-wrapper .paqc-content-wrapper {
-        border: 1px solid #cccccc;
-        border-bottom: 2px solid #45b5c6;
-    }
-    .paqc-topics-buttons {
-        border: none;
-    }
-    .paqc-topics-buttons {
-        border-bottom: 1px solid #cccccc;
-    }
-    .paqc-topics-buttons a {
-        width: auto;
-        display: block;
-        border: none;
-    }
-    .paqc-add-topic-button {
-        width: auto;
-    }
-    .paqc-add-topic-button a {
+    
+    .navbar {
         padding: 0;
     }
-    .paqc-add-topic-button p {
-        display: none;
+    
+    .paqc-modules-toggler-wrapper,
+    .paqc-lessons-toggler-wrapper {
+        padding: 0.5rem 1rem 0.5rem 1.7rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
-    .paqc-topics-tab .paqc-add-topic-button a:hover {
-        color:#1b98a5;
+    
+    .paqc-modules-toggler-wrapper .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .paqc-modules-navbar,
+    .paqc-lessons-navbar,
+    .paqc-topics-navbar {
+        width: 100%;
+    }
+    
+    .paqc-modules-navbar .paqc-icon a {
+        color: #dbdbdb;
+    }
+    
+    .paqc-trash-icon {
+        position: absolute;
+        height: 100%;
+        z-index: 10;
+        top: 0;
+        right: 0.6rem;
+    }
+    
+    .paqc-module-btn {
+        position: relative;
+        border: none;
+        width: 100%;
+        font-weight: 300;
+        color: #dbdbdb;
+        background: #17a2b8;
+        border-top: 1px solid #45b5c6;
+        border-bottom: 1px solid #2095a8;
+        padding: 1rem 1rem 1rem 1.7rem;
+        text-align: left;
+    }
+    
+    .paqc-module-btn:hover,
+    .paqc-module-btn:focus {
+        box-shadow: none;
+        border-radius: 0px;
+        outline: none;
+        color: #0d5c68;
+        background-color: #138496;
+    }
+    
+    .paqc-module-btn .fa-plus-circle {
+        padding-right: 0.25rem;
+    }
+    /* Lessons Classes */
+    
+    .paqc-lessons-navbar-wrapper {
+        border-bottom: 2px solid #d6d6d6;
+    }
+    
+    .paqc-lessons-navbar-wrapper .navbar-collapse {
+        width: 100%;
+    }
+    
+    .paqc-lessons-toggler-wrapper {
+        border-bottom: 1px solid #e2e2e2;
         background-color: #efeeee;
     }
-}
+    
+    .paqc-lessons-toggler-wrapper .navbar-toggler {
+        border-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .paqc-lessons-toggler-wrapper .navbar-brand {
+        color: #777777;
+    }
+    
+    .paqc-lesson-btn {
+        position: relative;
+        width: 100%;
+        border: none;
+        text-align: left;
+        border-bottom: 1px solid #e2e2e2;
+        background-color: #efeeee;
+        padding: 1rem 0rem 1rem 1.7rem;
+    }
+    
+    .paqc-lesson-btn:hover,
+    .paqc-lesson-btn:focus {
+        background-color: #f4f4f4;
+        color: #606060;
+    }
+    
+    .paqc-lesson-btn .paqc-icon:hover {
+        color: #4d4d4d;
+    }
+    
+    .paqc-lesson-btn .fa-plus-circle {
+        padding-right: 0.25rem;
+    }
+    
+    .paqc-lesson-content-wrapper {
+        padding: 0;
+        background-color: #f1f1f1;
+        margin-bottom: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    /* Topics Classes */
+    
+    .paqc-topics-navbar-wrapper {}
+    
+    .paqc-topics-content-wrapper {
+        padding: 0rem 1rem;
+    }
+    
+    .paqc-topic-content {
+        border-top: 1px solid #cccccc;
+        padding: 2rem 1rem;
+    }
+    
+    .paqc-topic-content h2 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .paqc-topic-btn {
+        border: none;
+        padding: 1rem 1.5rem;
+    }
+    
+    .paqc-topic-btn:hover {
+        background-color: #e2e2e2;
+    }
+    /* Medium Screens */
+    
+    @media (min-width: 768px) {
+        .navbar {
+            padding: 0;
+        }
+        .navbar-expand-md {
+            flex-flow: column;
+        }
+        .paqc-modules-toggler-wrapper {
+            display: none;
+        }
+        .paqc-lessons-navbar-wrapper {
+            border: none;
+        }
+        .paqc-lessons-toggler-wrapper {
+            display: none;
+        }
+        .paqc-lessons-navbar .collapse {
+            display: none !important;
+        }
+        .paqc-lessons-navbar .show {
+            display: block !important;
+        }
+        .paqc-lesson-btn {
+            border: 1px solid #cccccc;
+            border-top: 2px solid #c1c1c1;
+            margin-bottom: 0.35rem;
+        }
+        .paqc-lesson-content-wrapper {
+            margin-bottom: 0.35rem;
+            background-color: #efeeee;
+        }
+    }
