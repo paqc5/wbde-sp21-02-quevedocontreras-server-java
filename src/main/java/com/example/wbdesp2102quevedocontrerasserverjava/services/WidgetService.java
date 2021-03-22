@@ -15,8 +15,8 @@ public class WidgetService {
     Widget w2 = new Widget(234l, "60514e91995a8b0017af1d0e", "PARAGRAPH", 1, "Paragraph Test 1");
     Widget w3 = new Widget(345l, "605154765e8e300017eedd24", "HEADING", 1, "Heading Test 1");
     Widget w4 = new Widget(456l, "605154765e8e300017eedd24", "PARAGRAPH", 1, "Paragraph Test 1");
-    Widget w5 = new Widget(345l, "605154765e8e300017eedd24", "HEADING", 2, "Heading Test 2");
-    Widget w6 = new Widget(567l, "605154765e8e300017eedd24", "PARAGRAPH", 1, "Paragraph Test 2");
+    Widget w5 = new Widget(567l, "605154765e8e300017eedd24", "HEADING", 2, "Heading Test 2");
+    Widget w6 = new Widget(678l, "605154765e8e300017eedd24", "PARAGRAPH", 1, "Paragraph Test 2");
 
     widgets.add(w1);
     widgets.add(w2);
