@@ -177,7 +177,6 @@ function renderUsers(usersArray) {
   for (var i = 0; i < usersArray.length; i++) {
     var user = usersArray[i];
     var userPwd = "•".repeat(user.password.length)
-    console.log(userPwd)
     $tableBody.prepend(` 
 			<div class="paqc-table-row">
         <div class="col-6 paqc-col-md-2-2">
