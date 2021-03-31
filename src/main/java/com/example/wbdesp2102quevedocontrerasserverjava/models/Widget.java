@@ -11,6 +11,7 @@ public class Widget {
   private String topicId;
   private String type;
   private Integer widgetOrder;
+  @Column(length = 650)
   private String text;
   private String src;
   private Integer size;
